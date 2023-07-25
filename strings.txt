@@ -1,0 +1,373 @@
+"""
+str=input()
+for char in str:
+    print(char,end=" ")
+
+-----------------------
+FIRST CHARACTER IN STRING
+
+str=input()
+for char in str:
+    print(char)
+    break
+
+
+str=input()
+print(str[0])
+
+-----------------------  
+
+str=input()  #my name is chitti
+l=list(input())  #aeiou
+for char in str:
+    if char in l:
+        print(char)  #a
+        break
+
+------------------------
+
+str=input()       #my name is chitti
+l=list(input())    #aeiou
+for char in str:
+    if char not in l:
+        print(char) 
+        break
+        
+------------------------
+length of str:
+        
+str=input()
+print(len(str))
+
+------------------------
+
+str=input()
+count=0
+for ch in str:
+    count+=1
+print(count)
+
+-------------------------
+
+#FIRST REPEATING CHAR:
+    
+str=input()
+for char in str:
+    if (str.count(char)>1):
+        print(char)
+        break
+    
+#FIRST NON REPEATING CHAR:
+
+str=input()
+for ch in str:
+    if (str.count(ch)==1):
+        print(ch)
+        break
+
+--------------------------
+DIFF B/W UNIQUE AND NON-UNIQUE CHARS:
+
+str=input()
+c=0
+d=0
+for ch in str:
+    if (str.count(ch)==1):
+        c+=1
+    else:
+        d+=1
+print(abs(c-d))
+
+----------------------------   
+DIFF B/W
+NO.OF VOWELS AND NO.OF CONSONENTS:
+
+str=input()
+l=list(input())  #AEIOU
+c=0
+d=0
+for ch in str:
+    if ch in l:
+        c+=1
+    else:
+        d+=1
+
+print(abs(c-d))
+
+------------------------------
+
+str=input()
+print(str[::-1])
+
+------------------------------
+str=input()
+str="".join(reversed(str))
+print(str)
+
+------------------------------
+
+
+str=input()
+substr=input()
+if (str.endswith(substr)):
+    print("True")
+else:
+    print("False")
+
+
+-----------------------------
+
+str=input()
+print(str.rfind('i',0,len(str)))
+
+#o/p: 2
+
+
+--------------------------------
+
+str=input()
+print(str.rindex('d',0,len(str)))
+
+---------------------------------
+
+str=input()
+print(str.swapcase())
+
+CHITTI----chitti
+
+
+--------------------------------
+FREQUENCY OF CHAR IN STRING
+
+str=input()
+dict={}
+for ch in str:
+    if ch in dict:
+        dict[ch]+=1
+    else:
+        dict[ch]=1
+print(dict)
+
+
+-----------------------------
+
+from collections import counter
+str=input()
+res=counter(str)
+print(res)
+
+-------------------------------
+
+str=input()
+for char in str:
+    print(str.count(char),end=" ")
+    
+--------------------------------
+
+
+for i in range(97,123):#a,b,c,.....,y,z
+    print(chr(i))
+
+-----------------------------------
+
+str=input()        #AbcDe
+str=str.lower()        #abcde
+for i in range(97,123):
+    count=0
+    j=chr(i)
+    for ch in str:
+        if j==ch:
+            count=count+1
+    if count>0:
+        print(j,count)
+
+--------------------------------
+
+#freq count for digits in number:
+
+num=input()
+dict={}
+for i in num:
+    if i in dict:
+        dict[i]+=1
+    else:
+        dict[i]=1
+print(dict)
+
+----------------------------------
+
+str=input()
+s=str.split(" ")
+for ch in s:
+    print(ch)
+
+#chitti sidda 449
+chitti
+sidda
+449
+
+--------------------------------
+
+str=input()
+s=str.split(" ")
+for ch in s:
+    print(ch[::-1])  
+
+#chitti sidda 449
+#ittihc
+#addis
+#944
+
+------------------------------
+
+REMOVING DUPLICATES FROM STRING:
+    
+str=input()     #chitti
+s=set(str)      #t c h i
+print(*s)  ------print(len(s))#4
+
+str=input()
+s=""
+for ch in str:
+    if ch not in s:
+        s+=ch
+print(s)
+
+-------------------------------
+
+#ADDING OF TWO STRINGS CONTAINS INTEGERS
+
+x=input()
+y=input()
+print(int(x)+int(y))
+
+----------------------------------
+
+Given two strings a and b consisting of lowercase characters.
+The task is to check whether two given strings are an anagram of each other or not.
+An anagram of a string is another string that contains the same characters,
+only the order of characters can be different. For example, act and tac are an anagram of each other.
+
+Example 1:
+
+Input:a = geeksforgeeks, b = forgeeksgeeks
+Output: YES
+Explanation: Both the string have same characters with
+        same frequency. So, both are anagrams.
+Example 2:
+
+Input:a = allergy, b = allergic
+Output: NO
+Explanation: Characters in both the strings are 
+        not same, so they are not anagrams.
+
+
+CODE:
+
+a=input()
+b=input()
+if sorted(a)==sorted(b):
+    print("yes")
+else:
+    print("no")
+
+-----------------------------------------------------
+
+def isfun(a,b):
+    return sorted(a)==sorted(b)
+
+a=input()
+b=input()
+if isfun(a,b):
+    print("YES")
+else:
+    print("No")
+
+--------------------------------------------------
+
+TO PRINT FIRST REPEATED NUMBER
+
+s=input()            #CHITTI
+a={}                 
+for ch in s:
+    if ch in a:
+        print(ch)
+    else:
+        a[ch]=0
+
+#O/P:   T ,I  
+-------------------------------------------
+
+str=input()
+str="".join(reversed(str))
+print(str)
+
+
+SUM OF DIGITS IN GIVEN STRING
+
+s=input()
+sum=0
+for i in range(0,len(s)):
+    if (s[i].isdigit()):
+        sum=sum+int(s[i])
+print(sum)
+
+
+aec449in
+o/p;
+17
+
+
+SUM OF DIGITS IN GIVEN NUM
+
+n=int(input())
+sum=0
+while (n>0):
+    r=n%10
+    sum=sum+r
+    n=n//10
+print(sum)
+    
+
+
+--------------------------
+
+
+s=input()
+for ch in s:
+    if (s.count(ch)==1):
+        break
+print(s.index(ch))
+
+
+
+first non repeating character
+
+t=int(input())
+for i in range(t):
+    s=input()
+    x=""
+    for ch in s:
+        if (s.count(ch)==1):
+            x=x+ch
+            break
+    if len(x)==0:
+        print(-1)
+    else:
+        print(x)
+
+
+
+def reverseWords(self,S):
+        # code here 
+        S1=S.split(".")[::-1]
+        l=[]
+        for i in S1:
+            l.append(i)
+        return(".".join(l))
+
+
+
+--------------------------------------
+"""
+

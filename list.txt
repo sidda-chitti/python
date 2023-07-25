@@ -1,0 +1,287 @@
+"""
+n=int(input())
+a=list(map(int,input().split()))
+for i in a:
+    if i%2==0:
+        print(i)
+-----------------------------      
+
+n=int(input())
+a=list(map(int,input().split()))
+for i in a:
+    if i%2!=0:
+        print(i)
+        break
+
+-----------------------------
+
+n=int(input())
+a=list(map(int,input().split()))
+print(a[0]+a[-1])
+
+----------------------------
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    if i not in b:
+        b.append(i)
+    else:
+        print(i)
+----------------------------
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    if i not in b:
+        b.append(i)
+    else:
+        b.remove(i)
+print(b[0])
+
+----------------------------
+7)
+
+def num(n,a,x):
+    for i in range(1,n+1):
+        if(a[i]==x):
+            return True
+        return False
+n=int(input())
+a=list(map(int,input().split()))
+x=int(input())
+if(num(n,a,x)):
+    print("yes")
+else:
+    print("no")
+
+7)
+
+n=int(input())
+a=list(map(int,input().split()))
+x=int(input())
+if x in a:
+    print("ÿes")
+else:
+    print("no")
+
+--------------------------
+
+
+n=int(input())
+a=list(map(int,input().split()))
+for i in a:
+    if a[i]%2==0:
+        if i%2==0:
+            print(i)
+--------------------------
+REVERSE OF LISTS:
+
+n=int(input())
+a=list(map(int,input().split()))
+print(a[::-1])
+
+
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    b.append(i)
+b.reverse()
+print(b)
+
+------------------------------
+reverse of number
+
+n=int(input())
+rev=0
+while n>0:
+    r=n%10
+    rev=(rev*10)+r
+    n=n//10
+print(rev)
+
+----------------------------
+n=int(input())
+a=list(map(int,input().split()))
+print(abs(max(a)-min(a)))
+
+-----------------------------
+10
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in range(n):
+    if i%2==0:
+        b.append(a[i])
+for j in b:
+    if j%2!=0:
+        print(j)
+        break
+        
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in range(n):
+    if i%2!=0:
+        b.append(a[i])
+for j in b:
+    if j%2==0:
+        print(j)
+        break
+
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in range(n):
+    if i%2==0:
+        b.append(a[i])
+for j in b:
+    if j%2==0:
+        print(j)
+        break
+
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in range(n):
+    if i%2!=0:
+        b.append(a[i])
+for j in b:
+    if j%2!=0:
+        print(j)
+        break
+    
+        
+------------------------------
+
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(n):
+    if a[i]==i:
+        print(i)
+        break
+----------------------------
+
+SPLIT LIST INTO TWO EQUAL LISTS     
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+c=[]
+for i in range(n):
+    if a[i]%2==0:
+        b.append(a[i])
+    else:
+        c.append(a[i])
+print(b,c)
+
+--------------------------
+EVEN,ODD LISTS
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+c=[]
+for i in a:
+    if i%2==0:
+        b.append(i)
+    else:
+        c.append(i)
+print(b,c)
+
+------------------------------
+MAX ODD - MIN EVEN
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+c=[]
+for i in a:
+    if i%2==0:
+        b.append(i)
+    else:
+        c.append(i)
+print(max(c)-min(b))
+
+--------------------------
+MEAN
+
+n=int(input())
+a=list(map(int,input().split()))
+sum=0
+for i in a:
+    sum=sum+i
+print(sum//n)
+----------------------------
+MODE
+
+from statistics import mode
+n=int(input())
+a=list(map(int,input().split()))
+print(mode(a))
+
+----------------------------
+MEDIAN
+
+from statistics import median
+n=int(input())
+a=list(map(int,input().split()))
+print(median(a))
+
+------------------------------
+TO FIND MIDDLE ELEMENT IN LIST
+
+n=int(input())
+a=list(map(int,input().split()))
+b=0
+c=0
+if len(a)%2==1:
+    b=(len(a)//2)
+    print(a[b])
+else:
+    c=(len(a)-1)//2
+    print(a[c])
+
+
+-------------------------------
+
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    b.append(i*i)
+print(*b)
+
+--------------------------------
+#list comphersion
+syntax:
+
+
+
+
+a,b,c=int(input().split())
+l=[]
+l.append(a,b,c)
+l.sort()
+print(l[1])
+
+
+
+avg:
+    
+n=int(input())
+l=list(map(int,input().split()))
+s=sum(l)
+print(s//n)
+    
+
+"""
+
